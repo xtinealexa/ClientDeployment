@@ -16,3 +16,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 as release
 COPY --from=build /app/Client .
 
 EXPOSE 80
+
+ENTRYPOINT ["dotnet", "Client.dll"]
